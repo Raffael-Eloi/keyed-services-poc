@@ -16,29 +16,7 @@ internal class EventHandlerFactory(IServiceProvider serviceProvider) : IEventHan
     public async Task HandleEvent(string eventName, object eventData)
     {
         var cancellationToken = new CancellationToken();
-
-        if (eventName == PurchaseOrder)
-        {
-            IEventHandler handler = _serviceProvider.GetRequiredKeyedService<IEventHandler>(PurchaseOrder);
-            await handler.HandleAsync(eventData, cancellationToken);
-            return;
-        }
-
-        else if (eventName == PaymentProcessed) 
-        {
-            IEventHandler handler = _serviceProvider.GetRequiredKeyedService<IEventHandler>(PaymentProcessed);
-            await handler.HandleAsync(eventData, cancellationToken);
-            return;
-        }
-
-        else if (eventName == InvoiceProcessed) 
-        {
-            IEventHandler handler = _serviceProvider.GetRequiredKeyedService<IEventHandler>(InvoiceProcessed);
-            await handler.HandleAsync(eventData, cancellationToken);
-            return;
-        }
-
-
-        throw new InvalidOperationException($"No handler found for event: {eventName}");
+        IEventHandler handler = _serviceProvider.GetRequiredKeyedService<IEventHandler>(eventName);
+        await handler.HandleAsync(eventData, cancellationToken);
     }
 }
