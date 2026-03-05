@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace KeyedServices.Factories;
 
-internal class EventHandlerFactory(IServiceProvider serviceProvider) : IEventHandlerFactory
+internal class EventHandlerFactory(IKeyedServiceProvider serviceProvider) : IEventHandlerFactory
 {
     public const string PurchaseOrder = "PurchaseOrder";
 
