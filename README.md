@@ -2,7 +2,9 @@
 
 A proof-of-concept demonstrating how to use **Keyed Services** in .NET to eliminate `switch`/`if-else` blocks when selecting between multiple implementations of the same interface at runtime.
 
-Read the full article on dev.to: [Stop Using Switch Statements: Keyed Services in .NET — A Practical Approach](https://dev.to/raffaeleloi/stop-using-switch-statements-keyed-services-in-net-a-practical-approach-1201-temp-slug-9150269)
+Read the full article on dev.to: [Stop Using Switch Statements: Keyed Services in .NET — A Practical Approach](https://dev.to/raffaeleloi/stop-using-switch-statements-keyed-services-in-net-a-practical-approach-iej)
+
+Read the full article on medium: [Stop Using Switch Statements: Keyed Services in .NET — A Practical Approach](https://medium.com/@raffaeleloi/stop-using-switch-statements-keyed-services-in-net-a-practical-approach-4ce3f106189d)
 
 ## The Problem
 
