@@ -41,24 +41,6 @@ public async Task HandleEvent(string eventName, object eventData)
 
 The event name *is* the key. Adding a new event handler is just a matter of creating the implementation and registering it — zero changes to existing code.
 
-## Project Structure
-
-```
-KeyedServices/
-├── Constants/
-│   └── EventKeys.cs              # Event type key constants
-├── Contracts/
-│   ├── IEventHandler.cs          # Handler interface
-│   └── IEventHandlerFactory.cs   # Factory interface
-├── EventHandlers/
-│   ├── PurchaseOrderEventHandler.cs
-│   ├── PaymentEventHandler.cs
-│   └── InvoiceEventHandler.cs
-├── Factories/
-│   └── EventHandlerFactory.cs    # Resolves handlers by key
-└── Program.cs                    # Console app entry point
-```
-
 ## How It Works
 
 **1. Register handlers with keys**
